@@ -1,4 +1,4 @@
-from application_logging import MyLogger
+from application_logging import logger
 from cement.core import controller
 
 
@@ -18,5 +18,5 @@ class BaseController(controller.CementBaseController):
 
     @controller.expose(hide=True, aliases=['run'])
     def default(self):
-        self.app.log.error("Test error")
-        self.app.log.info("Test info")
+        logger.error("Test error")
+        logger.info("Test info")

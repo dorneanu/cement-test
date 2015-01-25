@@ -12,3 +12,5 @@ class MyLogger(LoggingLogHandler):
 
         config_section = 'log'
         label = 'my application'
+
+logger = MyLogger()

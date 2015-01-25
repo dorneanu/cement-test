@@ -2,6 +2,7 @@ import codecs
 import os
 import re
 
+from application_logging import logger
 
 class Parser:
     """Iterate through files and search for function/method calls"""
@@ -10,5 +11,6 @@ class Parser:
         pass
 
     def run(self):
-        pass
+        logger.info("Info test")
+        logger.warn("Warning")
 

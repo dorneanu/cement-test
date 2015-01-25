@@ -1,4 +1,4 @@
-from application_logging import MyLogger
+from application_logging import MyLogger, logger
 from cement.core import foundation
 from application_controller_base import BaseController
 
@@ -8,12 +8,5 @@ class MyApp(foundation.CementApp):
     class Meta:
         label = "application"
         base_controller = BaseController
-        log_handler = MyLogger
+        log_handler = logger
         debug = False
-
-
-# Add application
-application = MyApp()
-
-# Add logger
-log = application.log
